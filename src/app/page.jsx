@@ -1,10 +1,79 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './page.module.css';
+
+// Icons and Images Import
+import { BiCodeAlt } from 'react-icons/bi';
+import { PiPencilCircleDuotone } from 'react-icons/pi';
+import { CgBrowser } from 'react-icons/cg';
+import { HiOutlineSpeakerphone, HiSpeakerphone } from 'react-icons/hi';
+
+import Rocket from '../../public/rocket-purple.png';
+import DevTeam from '../../public/dev-team-image.svg'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1>Hi! I am Messier Amaral and is the my first website with Next.js!</h1>
-    </main>
+    <div className={styles.Container}>
+
+      <div className={styles.DetailsContainer}>
+        <div className={styles.LogoContainer}>
+          <Image
+            src={Rocket}
+            alt='Purple Rocket Logo'
+            width={45}
+          />
+          <p id={styles.TitleLogo}>Messier</p>
+          <p id={styles.SubtileLogo}>Amaral</p>
+        </div>
+        <Image 
+          src={DevTeam}
+          alt='Dev Team Image'
+          width={380}
+        />
+      </div>
+
+      <main className={styles.Main}>
+        <h1 id={styles.Title}>Desbloqueie o poder da sua marca com o Briefing perfeito!</h1>
+
+        <p className={styles.Description}>
+          Impulsione sua marca com o Briefing perfeito! Forneça informações essenciais para criar um serviço personalizado e sob medida para você. Seja um site, uma logo, um design completo ou qualquer outra necessidade, essas informações serão enviadas diretamente para mim. 
+        </p>
+
+        <p className={styles.Description}>
+          Com uma análise cuidadosa, entrarei em contato o mais rápido possível para transformar suas ideias em realidade!
+        </p>
+
+        <section className={styles.ServicesContainer}>
+          <h2 id={styles.TitleSection}>Serviços Oferecidos</h2>
+          <div className={styles.ServiceLeft}>
+
+            <span className={styles.Service}>
+              <BiCodeAlt />
+              <p>Desenvolvedor Full-Stack</p>
+            </span>
+            <span className={styles.Service}>
+              <PiPencilCircleDuotone />
+              <p>Designer Gráfico</p>
+            </span>
+
+          </div>
+
+          <div className={styles.ServiceRight}>
+
+            <span className={styles.Service}>
+              <CgBrowser />
+              <p>Designer Web / UI & UX</p>
+            </span>
+            <span className={styles.Service}>
+              <HiSpeakerphone />
+              <p>Especialista em Markentig</p>
+            </span>
+
+          </div>
+          <Link href='/'>Ver todos os Serviços</Link>
+        </section>
+        <Link href='/'>Iniciar Formulário</Link>
+      </main>
+    </div>
   )
 }
