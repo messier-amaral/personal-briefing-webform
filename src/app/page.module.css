@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+}
+
+.DetailsContainer {
+    padding: 30px;
+    max-width: 450px;
+    height: 100vh;
+    background-color: #E1DAFC;
+}
+
+.LogoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+#TitleLogo,
+#SubtitleLogo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+#TitleLogo {
+    margin-left: 15px;
+    color: #01000D;
+}
+
+#SubtitleLogo {
+    margin-left: 10px;
+    color: #6947EF;
+}
+
+#DevTeamImage {
+    margin-top: 110px;
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 50px;
+}
+
+#Title {
+    margin-bottom: 30px;
+    font-size: 2.8em;
+    color: #8063F1;
+}
+
+.Description {
+    margin-bottom: 20px;
+    font-size: 1.15em;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.ServicesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-left: 70px;
+    text-align: center;
+    align-items: center;
+}
+
+
+#TitleSection {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+#SecondGroup {
+    margin-right: 60px;
+}
+
+.Service {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+
+.Icons {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+
+    background-color: #6947EF;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.NameService {
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+#MoreServicesLink {
+    margin-bottom: 80px;
+
+    color: #01000D;
+    font-style: italic;
+    text-align: center;
+    align-self: center;
+
+    transition: transform 1s, text-decoration 1s, font-style 1s, font-weight 1s;
+}
+
+#MoreServicesLink:hover,
+#MoreServicesLink:focus {
+    transform: scale(1.1);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+#LinkButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    width: 450px;
+    height: 40px;
+    
+    color: aliceblue;
+    background-color: #6947EF;
+    text-decoration: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+#LinkButton:hover,
+#LinkButton:focus {
+    transform: scale(1.06);
+}
