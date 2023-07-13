@@ -73,7 +73,7 @@ export default function Home() {
         </section>
         <Link href='/' id={styles.MoreServicesLink}>Ver todos os Serviços</Link>
 
-        <Link href='/step-one' id={styles.LinkButton}>Iniciar Formulário</Link>
+        <Link href='/form' id={styles.LinkButton}>Iniciar Formulário</Link>
       </main>
     </div>
   )

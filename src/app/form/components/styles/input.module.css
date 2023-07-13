@@ -1,0 +1,25 @@
+.FormControl {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.FormControl label {
+    margin-bottom: .6em;
+    font-weight: 600;
+}
+
+.FormControl input {
+    height: 40px;
+    padding: .7em;
+    border-radius: 10px;
+    border: 2px solid #9B9B9B;
+}
+
+.NormalInput {
+    width: 600px;
+}
+
+.SmallInput {
+    width: 280px;
+}
