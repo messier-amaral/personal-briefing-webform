@@ -11,6 +11,7 @@
     max-width: 450px;
     height: 100vh;
     background-color: #E1DAFC;
+    background-image: url(/detail-image.svg)
 }
 
 .LogoContainer {
@@ -37,7 +38,7 @@
 }
 
 #DevTeamImage {
-    margin-top: 110px;
+    margin-top: 180px;
 }
 
 .Main {

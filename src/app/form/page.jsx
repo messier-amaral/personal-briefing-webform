@@ -6,8 +6,12 @@ import StepOne from './components/StepOne';
 import StepTwo from './components/StepTwo';
 import StepThree from './components/StepThree';
 
+import DetailOne from './components/details/DetailOne'
+import DetailTwo from './components/details/DetailTwo'
+import DetailThree from './components/details/DetailThree'
+
 // Import Icons and Images
-import Rocket from '../../../public/rocket-purple.png'
+import Rocket from '../../../public/rocket-purple.svg'
 
 export default function FormPage() {
     return (
@@ -23,7 +27,7 @@ export default function FormPage() {
                     <p id={styles.TitleLogo}>Messier</p>
                     <p id={styles.SubtitleLogo}>Amaral</p>
                 </div>
-                <p>Componente de imagem aqui...</p>
+                <DetailTwo />
             </div>
 
             <div className={styles.MainContainer}>
@@ -31,7 +35,7 @@ export default function FormPage() {
                     <p>Menu de navegação aqui...</p>
                 </nav>
 
-                <hr />
+                    <span id={styles.Divider}></span>
 
                 <main className={styles.Main}>
                     <form>

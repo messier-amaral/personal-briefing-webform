@@ -10,6 +10,7 @@
     height: 100vh;
     padding: 40px;
     background-color: #E1DAFC;
+    background-image: url(/detail-image.svg)
 }
 
 .LogoContainer {
@@ -35,8 +36,17 @@
     color: #6947EF;
 }
 
+#Divider {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 3px;
+    height: 550px;
+    background-color: #AAAA;
+}
+
+
 .MainContainer {
     display: flex;
-    flex-direction: column;
-    margin: 40px 60px 0px 100px;
+    flex-direction: row;
+    margin: 40px 60px 0px 80px;
 }

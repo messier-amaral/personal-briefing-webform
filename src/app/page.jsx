@@ -8,7 +8,7 @@ import { PiPencilCircleDuotone } from 'react-icons/pi';
 import { CgBrowser } from 'react-icons/cg';
 import { HiOutlineSpeakerphone } from 'react-icons/hi';
 
-import Rocket from '../../public/rocket-purple.png';
+import Rocket from '../../public/rocket-purple.svg';
 import DevTeam from '../../public/dev-team-image.svg'
 
 export default function Home() {
