@@ -3,23 +3,20 @@
 import Image from 'next/image';
 import styles from '../../../styles/formPage.module.css';
 
-import { useState } from 'react';
-import FormControl from '../hooks/FormControl';
+import { useForm } from '../hooks/useForm';
 import DetailControl from '../hooks/DetailControl';
+
+import CompanyInformation from './components/CompanyInformation';
+import ProjectInformation from './components/ProjectInformation';
+import Contact from './components/Contact';
 
 // Import Icons and Images
 import Rocket from '../../../public/rocket-purple.svg';
 
 export default function FormPage() {
-  const [currentStep, setCurrentStep] = useState(0);
+  const formComponents = [<CompanyInformation key={0}/>, <ProjectInformation key={1} />, <Contact key={0}/> ]
 
-  const handleNextStep = () => {
-    setCurrentStep(currentStep + 1);
-  };
-
-  const handlePreviusStep = () => {
-    setCurrentStep(currentStep - 1);
-  };
+  const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } = useForm(formComponents)
 
   return (
     <div className={styles.FormControl}>
@@ -44,25 +41,25 @@ export default function FormPage() {
 
         <span id={styles.Divider}></span>
 
-        <form className={styles.FormContainer}>
+        <form className={styles.FormContainer} onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className={styles.FormSteps}>
-            <FormControl step={currentStep} />
+            {currentComponent}
           </div>
           <div className={styles.FormActions}>
-            <button
-              type="button"
-              onClick={handlePreviusStep}
-              disabled={currentStep === 0}
-            >
-              Voltar
-            </button>
-            <button
-              type="submit"
-              onClick={handleNextStep}
-              disabled={currentStep === 2}
-            >
-              Próxima etapa
-            </button>
+            {!isFirstStep && (
+              <button type="button" onClick={() => changeStep(currentStep - 1)}>
+                Voltar
+              </button>
+            )}
+            {!isLastStep ? (
+              <button type="submit">
+                Avançar
+              </button>
+            ) : (
+              <button type='button'>
+                  Enviar
+              </button>
+            )}
           </div>
         </form>
       </div>

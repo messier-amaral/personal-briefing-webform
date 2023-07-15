@@ -12,7 +12,6 @@ export default function Input ({ type = 'text', text, name, placeholder, value, 
                 placeholder={placeholder}
                 className={styles[ClassName]}
                 defaultValue={value}
-                required
             />
         </div>
     )
