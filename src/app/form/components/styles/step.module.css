@@ -1,0 +1,80 @@
+.Steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.Step,
+.StepActive {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 45px;
+}
+
+.IconStep,
+.IconStepActive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 45px;
+    height: 45px;
+    
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    
+}
+
+.Icons,
+.IconsActive {
+    font-size: 28px;
+}
+
+.TextStep,
+.TextStepActive {
+    margin-left: 15px;
+}
+
+.Title,
+.TitleActive {
+    color: #5A5A5A;
+    font-size: 1.06em;
+}
+
+.Subtitle,
+.SubtitleActive {
+    color: #9B9B9B;
+    font-size: .8em;
+}
+
+.NextStep,
+.NextStepActive {
+    font-size: 2em;
+}
+
+#LastNextStep {
+    margin-left: 27px;
+}
+
+#FirstNextStep {
+    margin-left: 10px;
+}
+
+
+/* For Step Active */
+
+.IconStepActive {
+    background-color: #6947EF;
+}
+
+.IconsActive {
+    color: aliceblue;
+}
+
+.TitleActive {
+    color: #6947EF;
+}
+
+.NextStepActive {
+    color: #6947EF;
+}
