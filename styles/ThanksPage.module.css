@@ -1,0 +1,49 @@
+.ThanksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+
+    padding: 50px;
+    height: 100vh;
+    background-color: #E1DAFC;
+    background-image: url(/rocket-detail.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#Title {
+    margin-left: 70px;
+    margin-right: 70px;
+    color: #6947EF;
+    font-size: 2.5em;
+}
+
+.Description {
+    margin: 30px 70px 0px 70px;
+    font-size: 1.2em;
+}
+
+#PrototypeImage {
+    margin-top: 20px;
+}
+
+#LinkButton {
+    margin-top: 15px;
+    height: 50px;
+    width: 400px;
+
+    padding: 9px;
+    text-align: center;
+
+    color: aliceblue;
+    background-color: #6947EF;
+
+    border-radius: 8px;
+    text-decoration: none;
+    transition: scale 1s;
+}
+
+#LinkButton:hover {
+    scale: 104%;
+}

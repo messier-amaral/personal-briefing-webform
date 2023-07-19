@@ -1,11 +1,13 @@
 'use client' // Definin that the page will be used on the client side, thus beign able to use useState from React.js
 
 import Image from 'next/image';
-import styles from '../../../styles/formPage.module.css';
+import Link from 'next/link';
+import styles from '../../../styles/FormPage.module.css';
 
 // Hooks
 import { useForm } from '../hooks/useForm';
 import React, { useState } from 'react';
+
 import DetailControl from './DetailControl';
 import PhraseControl from './PhraseControl';
 
@@ -93,10 +95,12 @@ export default function FormPage() {
                 <MdOutlineNavigateNext className={styles.ButtonIcons} />
               </button>
             ) : (
-              <button type='button' id={styles.SendButton} onClick={handleFormSubmit}>
+              <Link href='/thanks' id={styles.LinkButton}>
+                <button type='button' id={styles.SendButton} onClick={handleFormSubmit}>
                   <span className={styles.TextButton}>Enviar</span>
                   <BiSend className={styles.ButtonIcons} id={styles.SendIcon}/>
               </button>
+              </Link>
             )}
           </div>
         </form>

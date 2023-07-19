@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+
 .FormControl {
     display: flex;
     flex-direction: column;
@@ -13,4 +15,13 @@
     padding: .7em;
     border-radius: 10px;
     border: 2px solid #9B9B9B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.FormControl textarea:hover,
+.FormControl textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 0px 2px #6947efa8;
+    padding: .82em;
 }
