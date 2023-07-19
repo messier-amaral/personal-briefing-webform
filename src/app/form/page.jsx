@@ -50,7 +50,7 @@ export default function FormPage() {
 
     let dataEmail = formData
 
-    emailjs.send("service_wx5bhje","template_ekaaw9m", dataEmail, "i8-OM_zMkSgDqXs4u")
+    emailjs.send("service_key","template_key", dataEmail, "personal_key")
   };
 
 
