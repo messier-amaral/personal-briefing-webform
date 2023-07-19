@@ -5,6 +5,7 @@ import styles from '../../../styles/formPage.module.css';
 
 // Hooks
 import { useForm } from '../hooks/useForm';
+import React, { useState } from 'react';
 import DetailControl from './DetailControl';
 import PhraseControl from './PhraseControl';
 
@@ -21,7 +22,33 @@ import { MdOutlineNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import { BiSend } from 'react-icons/bi'
 
 export default function FormPage() {
-  const formComponents = [<CompanyInformation key={0}/>, <ProjectInformation key={1} />, <Contact key={2}/> ]
+  // Getting data from CompanyInformation
+  const [formData, setFormData] = useState({
+    company_name: '', company_segment: '', company_slogan: '',
+    company_goal: '', target_audience: '', reason_to_choose: '',
+    project_color: '', project_element: '', service_option: '',
+    project_emotion: '', project_visual: '', project_requisite: '',
+    project_information: '', representant: '', number: '', email: '',
+    address: '', services_add: '', budget: '', deadline: '',
+    define_company: '', message: '',
+  });
+
+  const handleInputChange = (name, value) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleFormSubmit = () => {
+    console.log(formData); // Mostra o formData no console
+  };
+
+  const formComponents = [
+    <CompanyInformation key={0} onChange={handleInputChange} formData={formData} />,
+    <ProjectInformation key={1}  onChange={handleInputChange} formData={formData} />,
+    <Contact key={2} onChange={handleInputChange} formData={formData} /> 
+  ]
 
   const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } = useForm(formComponents)
 
@@ -66,7 +93,7 @@ export default function FormPage() {
                 <MdOutlineNavigateNext className={styles.ButtonIcons} />
               </button>
             ) : (
-              <button type='button' id={styles.SendButton}>
+              <button type='button' id={styles.SendButton} onClick={handleFormSubmit}>
                   <span className={styles.TextButton}>Enviar</span>
                   <BiSend className={styles.ButtonIcons} id={styles.SendIcon}/>
               </button>

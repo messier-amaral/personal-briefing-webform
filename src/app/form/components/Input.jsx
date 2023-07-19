@@ -1,6 +1,19 @@
-import styles from './styles/input.module.css'
+'use client'
 
-export default function Input ({ type = 'text', text, name, placeholder, value, ClassName = 'NormalInput'}) {
+import styles from './styles/input.module.css'
+import React, { useState } from 'react'
+
+export default function Input ({ type = 'text', text, name, placeholder, value, ClassName = 'NormalInput', onChange}) {
+    const [inputValue, setInputValue] = useState(value || '')
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setInputValue(value);
+
+        if (onChange) {
+            onChange(name, value);
+        }
+    };
 
     return (
         <div className={styles.FormControl}>
@@ -11,8 +24,8 @@ export default function Input ({ type = 'text', text, name, placeholder, value, 
                 id={name}
                 placeholder={placeholder}
                 className={styles[ClassName]}
-                defaultValue={value}
-                required
+                defaultValue={inputValue}
+                onChange={handleChange}
             />
         </div>
     )
