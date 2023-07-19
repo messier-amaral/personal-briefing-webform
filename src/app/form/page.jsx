@@ -23,6 +23,9 @@ import Rocket from '../../../public/rocket-purple.svg';
 import { MdOutlineNavigateNext, MdNavigateBefore } from 'react-icons/md'
 import { BiSend } from 'react-icons/bi'
 
+// Send Email Service
+import emailjs from '@emailjs/browser'
+
 export default function FormPage() {
   // Getting data from CompanyInformation
   const [formData, setFormData] = useState({
@@ -43,8 +46,13 @@ export default function FormPage() {
   };
 
   const handleFormSubmit = () => {
-    console.log(formData); // Mostra o formData no console
+    console.log(formData); 
+
+    let dataEmail = formData
+
+    emailjs.send("service_wx5bhje","template_ekaaw9m", dataEmail, "i8-OM_zMkSgDqXs4u")
   };
+
 
   const formComponents = [
     <CompanyInformation key={0} onChange={handleInputChange} formData={formData} />,
